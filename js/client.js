@@ -6,7 +6,7 @@ button.addEventListener("click", getRapper);
 async function getRapper() {
   try {
     const request = await fetch(
-      `https://full-stack-practice-fnfr.onrender.com${input}`
+      `https://full-stack-practice-fnfr.onrender.com/api/${input}`
     );
     const data = await request.json();
     console.log(data);
