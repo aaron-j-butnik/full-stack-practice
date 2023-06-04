@@ -5,7 +5,9 @@ button.addEventListener("click", getRapper);
 
 async function getRapper() {
   try {
-    const request = await fetch(`http://localhost:8000/api/${input}`);
+    const request = await fetch(
+      `https://full-stack-practice-fnfr.onrender.com${input}`
+    );
     const data = await request.json();
     console.log(data);
     document.querySelector("#age").innerText = data.age;
