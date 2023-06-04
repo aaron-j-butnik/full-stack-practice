@@ -10,9 +10,13 @@ async function getRapper() {
     );
     const data = await response.json();
     console.log(data);
-    document.querySelector("#age").innerText = data.age;
-    document.querySelector("#birthname").innerText = data.birthname;
-    document.querySelector("#birthlocation").innerText = data.birthlocation;
+    document.querySelector("#age").textContent = `Age: ${data.age}`;
+    document.querySelector(
+      "#birthname"
+    ).textContent = `Birth Name: ${data.birthname}`;
+    document.querySelector(
+      "#birthlocation"
+    ).textContent = `Birth Location: ${data.birthlocation}`;
   } catch (error) {
     console.log(error);
   }
