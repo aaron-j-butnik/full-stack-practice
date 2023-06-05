@@ -6,7 +6,7 @@ async function getRapper() {
   const input = document.querySelector("input").value;
   try {
     const response = await fetch(
-      `https://full-stack-practice-l2c4.onrender.com${input}`
+      `https://full-stack-practice-l2c4.onrender.com/api/${input}`
     );
     const data = await response.json();
     console.log(data);
